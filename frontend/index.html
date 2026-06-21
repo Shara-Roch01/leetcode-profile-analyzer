@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Profile Analyzer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LeetCode Profile Analyzer</h1>
+        <p class="subtitle">Enter a username to fetch live data metrics</p>
+        
+        <div class="search-box">
+            <input type="text" id="username-input" placeholder="e.g., sethu_madhavan">
+            <button id="search-btn">Analyze Profile</button>
+        </div>
+
+        <div id="error-message" class="error hidden"></div>
+
+        <div id="results-card" class="results-card hidden">
+            <h2 id="display-username"></h2>
+            
+            <div class="chart-container">
+                <canvas id="statsChart"></canvas>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box easy">
+                    <h3>Easy</h3>
+                    <p id="easy-count">0</p>
+                </div>
+                <div class="stat-box medium">
+                    <h3>Medium</h3>
+                    <p id="medium-count">0</p>
+                </div>
+                <div class="stat-box hard">
+                    <h3>Hard</h3>
+                    <p id="hard-count">0</p>
+                </div>
+            </div>
+
+            <div class="segment-container excellence-segment">
+                <div class="segment-header">
+                    <span>🏆</span>
+                    <h3>Area of Excellence</h3>
+                </div>
+                <p id="excellence-text">Analyzing profile stats...</p>
+            </div>
+
+            <div class="segment-container improvement-segment">
+                <div class="segment-header">
+                    <span>🛠️</span>
+                    <h3>Area for Improvement</h3>
+                </div>
+                <p id="improvement-text">Calculating optimal metrics...</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
