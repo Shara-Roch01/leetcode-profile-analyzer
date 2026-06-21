@@ -14,7 +14,7 @@ document.getElementById('search-btn').addEventListener('click', async () => {
         errorDiv.classList.add('hidden');
         
         // Use 5001 or 5000 depending on which port your backend server started on
-        const response = await fetch(`https://leetcode-analyzer-backend.onrender.com/api/v1/leetcode/${username}`);
+        const response = await fetch(`https://leetcode-profile-analyzer.onrender.com/api/v1/leetcode/${username}`);
         if (!response.ok) throw new Error('User not found or API failure.');
 
         const data = await response.json();
